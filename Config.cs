@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBManager;
+using DBManager.ClassConfig;
+using DBManager.MSSQLCommands;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -19,8 +21,8 @@ namespace DBManager
     {
         bool mouseClicked;
         Point clickedAt;
-        ClassConfig.SQLConfig configSQL = new ClassConfig.SQLConfig();
-        ClassConfig.ConfigForm configForm = new ClassConfig.ConfigForm();
+
+        
         public static string str = ".\\Config\\Config.Valkyrie";
 
 
@@ -31,7 +33,7 @@ namespace DBManager
 
         private void Config_Load(object sender, EventArgs e)
         {
-            
+           
         
         }
 
@@ -68,6 +70,7 @@ namespace DBManager
         }
 
 
+     
 
         public void SaveConfig()
         {
@@ -75,87 +78,105 @@ namespace DBManager
             {
                 if (linex.Contains("ServerSQL = "))
                 {
-                    configSQL.ServerSQL = linex.Substring(12);
+                     ClassConfig.SQLConfig.ServerSQL = linex.Substring(12);
                 }
 
                 if (linex.Contains("DatabaseSQL = "))
                 {
-                    configSQL.DatabaseSQL = linex.Substring(14);
+                    ClassConfig.SQLConfig.DatabaseSQL = linex.Substring(14);
                 }
 
                 if (linex.Contains("LoginSQL = "))
                 {
-                    configSQL.LoginSQL = linex.Substring(11);
+                    ClassConfig.SQLConfig.LoginSQL = linex.Substring(11);
                 }
 
                 if (linex.Contains("PassSQL = "))
                 {
-                    configSQL.PassSQL = linex.Substring(10);
+                    ClassConfig.SQLConfig.PassSQL = linex.Substring(10);
                 }
 
                 if (linex.Contains("PortSQL = "))
                 {
-                    configSQL.PortSQL = linex.Substring(10);
+                    ClassConfig.SQLConfig.PortSQL = linex.Substring(10);
                 }
 
                 if(linex.Contains("DbType = "))
                 {
-                    configForm.DbType = linex.Substring(9);
+                    ConfigForm.DbType = linex.Substring(9);
                 }
 
                 if (linex.Contains("Install = "))
                 {
-                    configForm.Install = linex.Substring(10);
+                    ConfigForm.Install = linex.Substring(10);
                 }
 
             }
 
 
-            if (System.IO.File.ReadAllLines(str)[1] == "Install = " + configForm.Install)
+            if (System.IO.File.ReadAllLines(str)[1] == "Install = " + ConfigForm.Install)
             {
                 MiscClass.Common.lineChanger("Install = " + "true", str, 2);
 
             }
 
-            if (System.IO.File.ReadAllLines(str)[2] == "DbType = " + configForm.DbType)
+            if (System.IO.File.ReadAllLines(str)[2] == "DbType = " + ConfigForm.DbType)
             {
                 MiscClass.Common.lineChanger("DbType = " + cbDbType.SelectedIndex, str, 3);
 
             }
 
-            if (System.IO.File.ReadAllLines(str)[5] == "ServerSQL = " + configSQL.ServerSQL)
+            if (System.IO.File.ReadAllLines(str)[5] == "ServerSQL = " + ClassConfig.SQLConfig.ServerSQL)
             {
                 MiscClass.Common.lineChanger("ServerSQL = " + textSQLServer.Text, str, 6);
 
             }
 
-            if (System.IO.File.ReadAllLines(str)[6] == "DatabaseSQL = " + configSQL.DatabaseSQL)
+            if (System.IO.File.ReadAllLines(str)[6] == "DatabaseSQL = " + ClassConfig.SQLConfig.DatabaseSQL)
             {
                 MiscClass.Common.lineChanger("DatabaseSQL = " + textDatabaseSQL.Text, str, 7);
 
             }
 
-            if (System.IO.File.ReadAllLines(str)[7] == "LoginSQL = " + configSQL.LoginSQL)
+            if (System.IO.File.ReadAllLines(str)[7] == "LoginSQL = " + ClassConfig.SQLConfig.LoginSQL)
             {
                 MiscClass.Common.lineChanger("LoginSQL = " + textLoginSQL.Text, str, 8);
 
             }
 
-            if (System.IO.File.ReadAllLines(str)[8] == "PassSQL = " + configSQL.PassSQL)
+            if (System.IO.File.ReadAllLines(str)[8] == "PassSQL = " + ClassConfig.SQLConfig.PassSQL)
             {
                 MiscClass.Common.lineChanger("PassSQL = " + textSQLPASS.Text, str, 9);
 
             }
 
-            if (System.IO.File.ReadAllLines(str)[9] == "PortSQL = " + configSQL.PortSQL)
+            if (System.IO.File.ReadAllLines(str)[9] == "PortSQL = " +  ClassConfig.SQLConfig.PortSQL)
             {
                 MiscClass.Common.lineChanger("PortSQL = " + textPortSQL.Text, str, 10);
 
             }
+
+            Program.LoadConfigs();
         }
         private void bNext_Click(object sender, EventArgs e)
         {
             SaveConfig();
+
+            if(ConfigForm.DbType == "0")
+            {
+                MSSQLCommands.Connect connect = new MSSQLCommands.Connect();
+
+                bool result = connect.TestConnection();
+                if (result)
+                {
+                    MessageBox.Show("Connection established!");
+                }
+                else
+                {
+                    MessageBox.Show("Connection not established!");
+                }
+            }
+
         }
     }
 }

@@ -110,6 +110,7 @@
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
     <Compile Include="MiscClass\Common.cs" />
+    <Compile Include="MSSQLCommands\Connect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Config.resx">
@@ -139,7 +140,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MSSQLCommands\" />
     <Folder Include="MYSQLCommands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

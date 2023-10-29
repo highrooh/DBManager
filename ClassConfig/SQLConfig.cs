@@ -9,14 +9,14 @@ namespace DBManager.ClassConfig
 {
     public class SQLConfig
     {
-        public string ServerSQL = "";
+        public static string ServerSQL = "";
 
-        public string DatabaseSQL = "";
+        public static string DatabaseSQL = "";
 
-        public string LoginSQL = "";
+        public static string LoginSQL = "";
 
-        public string PassSQL = "";
+        public static string PassSQL = "";
        
-        public string PortSQL = "";
+        public static string PortSQL = "";
     }
 }

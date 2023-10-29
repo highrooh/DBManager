@@ -1,6 +1,6 @@
 [Config App]
-Install = false
-DbType = 1
+Install = true
+DbType = 0
 
 [Config SQL Server]
 ServerSQL = (local)
