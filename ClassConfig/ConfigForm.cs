@@ -8,7 +8,7 @@ namespace DBManager.ClassConfig
 {
     public class ConfigForm
     {
-        public int DbType;
-        public bool Install = false;
+        public string DbType;
+        public string Install = "false";
     }
 }

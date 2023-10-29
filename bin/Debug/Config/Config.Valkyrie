@@ -1,0 +1,10 @@
+[Config App]
+Install = false
+DbType = 1
+
+[Config SQL Server]
+ServerSQL = (local)
+DatabaseSQL = MuOnline
+LoginSQL = sa
+PassSQL = 12345
+PortSQL = 1433

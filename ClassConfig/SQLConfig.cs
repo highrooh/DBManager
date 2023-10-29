@@ -10,5 +10,13 @@ namespace DBManager.ClassConfig
     public class SQLConfig
     {
         public string ServerSQL = "";
+
+        public string DatabaseSQL = "";
+
+        public string LoginSQL = "";
+
+        public string PassSQL = "";
+       
+        public string PortSQL = "";
     }
 }

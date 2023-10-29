@@ -20,7 +20,7 @@ namespace DBManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ClassConfig.ConfigForm config = new ClassConfig.ConfigForm();
-            if(config.Install == false)
+            if(config.Install == "false")
             {
              Application.Run(new Config());
             }

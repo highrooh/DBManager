@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassConfig\ConfigForm.cs" />
     <Compile Include="ClassConfig\SQLConfig.cs" />
     <Compile Include="Config.cs">
       <SubType>Form</SubType>
@@ -108,6 +109,7 @@
     <Compile Include="Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
+    <Compile Include="MiscClass\Common.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Config.resx">
@@ -135,6 +137,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MSSQLCommands\" />
+    <Folder Include="MYSQLCommands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

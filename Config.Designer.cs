@@ -44,6 +44,8 @@
             this.lUserName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textDatabaseSQL = new System.Windows.Forms.TextBox();
+            this.lDatabaseSQL = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@
             this.cbDbType.Items.AddRange(new object[] {
             "MSSQL",
             "MYSQL"});
-            this.cbDbType.Location = new System.Drawing.Point(98, 425);
+            this.cbDbType.Location = new System.Drawing.Point(98, 471);
             this.cbDbType.Margin = new System.Windows.Forms.Padding(4);
             this.cbDbType.Name = "cbDbType";
             this.cbDbType.Size = new System.Drawing.Size(231, 22);
@@ -69,7 +71,7 @@
             this.lDbType.AutoSize = true;
             this.lDbType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lDbType.Font = new System.Drawing.Font("Caviar Dreams", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDbType.Location = new System.Drawing.Point(183, 403);
+            this.lDbType.Location = new System.Drawing.Point(183, 449);
             this.lDbType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDbType.Name = "lDbType";
             this.lDbType.Size = new System.Drawing.Size(66, 18);
@@ -79,6 +81,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textDatabaseSQL);
+            this.panel1.Controls.Add(this.lDatabaseSQL);
             this.panel1.Controls.Add(this.bNext);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.textPortSQL);
@@ -107,9 +111,9 @@
             this.bNext.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.bNext.FlatAppearance.BorderSize = 2;
             this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNext.Location = new System.Drawing.Point(98, 463);
+            this.bNext.Location = new System.Drawing.Point(98, 499);
             this.bNext.Name = "bNext";
-            this.bNext.Size = new System.Drawing.Size(230, 71);
+            this.bNext.Size = new System.Drawing.Size(231, 43);
             this.bNext.TabIndex = 13;
             this.bNext.Text = "Next";
             this.bNext.UseVisualStyleBackColor = true;
@@ -127,7 +131,7 @@
             // 
             // textPortSQL
             // 
-            this.textPortSQL.Location = new System.Drawing.Point(98, 358);
+            this.textPortSQL.Location = new System.Drawing.Point(98, 413);
             this.textPortSQL.Margin = new System.Windows.Forms.Padding(4);
             this.textPortSQL.Name = "textPortSQL";
             this.textPortSQL.Size = new System.Drawing.Size(231, 25);
@@ -138,7 +142,7 @@
             this.lPortSQL.AutoSize = true;
             this.lPortSQL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lPortSQL.Font = new System.Drawing.Font("Caviar Dreams", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPortSQL.Location = new System.Drawing.Point(174, 336);
+            this.lPortSQL.Location = new System.Drawing.Point(174, 391);
             this.lPortSQL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lPortSQL.Name = "lPortSQL";
             this.lPortSQL.Size = new System.Drawing.Size(71, 18);
@@ -233,6 +237,26 @@
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // textDatabaseSQL
+            // 
+            this.textDatabaseSQL.Location = new System.Drawing.Point(98, 353);
+            this.textDatabaseSQL.Margin = new System.Windows.Forms.Padding(4);
+            this.textDatabaseSQL.Name = "textDatabaseSQL";
+            this.textDatabaseSQL.Size = new System.Drawing.Size(231, 25);
+            this.textDatabaseSQL.TabIndex = 15;
+            // 
+            // lDatabaseSQL
+            // 
+            this.lDatabaseSQL.AutoSize = true;
+            this.lDatabaseSQL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lDatabaseSQL.Font = new System.Drawing.Font("Caviar Dreams", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDatabaseSQL.Location = new System.Drawing.Point(155, 331);
+            this.lDatabaseSQL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lDatabaseSQL.Name = "lDatabaseSQL";
+            this.lDatabaseSQL.Size = new System.Drawing.Size(114, 18);
+            this.lDatabaseSQL.TabIndex = 14;
+            this.lDatabaseSQL.Text = "Database SQL:";
+            // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -275,6 +299,8 @@
         private System.Windows.Forms.Label lPortSQL;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bNext;
+        private System.Windows.Forms.TextBox textDatabaseSQL;
+        private System.Windows.Forms.Label lDatabaseSQL;
     }
 }
 
