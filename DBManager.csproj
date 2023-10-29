@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassConfig\SQLConfig.cs" />
     <Compile Include="Config.cs">
       <SubType>Form</SubType>
     </Compile>

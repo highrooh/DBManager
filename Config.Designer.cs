@@ -32,7 +32,7 @@
             this.cbDbType = new System.Windows.Forms.ComboBox();
             this.lDbType = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bNext = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textPortSQL = new System.Windows.Forms.TextBox();
             this.lPortSQL = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.bNext);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.textPortSQL);
             this.panel1.Controls.Add(this.lPortSQL);
@@ -102,17 +102,18 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Config_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Config_MouseUp);
             // 
-            // button1
+            // bNext
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(98, 463);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 71);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bNext.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.bNext.FlatAppearance.BorderSize = 2;
+            this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNext.Location = new System.Drawing.Point(98, 463);
+            this.bNext.Name = "bNext";
+            this.bNext.Size = new System.Drawing.Size(230, 71);
+            this.bNext.TabIndex = 13;
+            this.bNext.Text = "Next";
+            this.bNext.UseVisualStyleBackColor = true;
+            this.bNext.Click += new System.EventHandler(this.bNext_Click);
             // 
             // pictureBox1
             // 
@@ -210,7 +211,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Caviar Dreams", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(370, 0);
+            this.label3.Location = new System.Drawing.Point(370, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 22);
@@ -224,7 +225,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Caviar Dreams", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(396, 0);
+            this.label2.Location = new System.Drawing.Point(396, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 22);
@@ -273,7 +274,7 @@
         private System.Windows.Forms.TextBox textPortSQL;
         private System.Windows.Forms.Label lPortSQL;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bNext;
     }
 }
 

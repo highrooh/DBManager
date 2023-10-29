@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBManager;
+using MySql.Data.MySqlClient;
 
 namespace DBManager
 {
@@ -15,6 +18,7 @@ namespace DBManager
     {
         bool mouseClicked;
         Point clickedAt;
+        ClassConfig.SQLConfig configSQL = new ClassConfig.SQLConfig();
 
 
         public Config()
@@ -24,7 +28,8 @@ namespace DBManager
 
         private void Config_Load(object sender, EventArgs e)
         {
-
+            
+        
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -59,6 +64,9 @@ namespace DBManager
             mouseClicked = false;
         }
 
-      
+        private void bNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
