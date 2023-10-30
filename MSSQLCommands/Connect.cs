@@ -36,11 +36,11 @@ namespace DBManager.MSSQLCommands
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 connection.Open();
-                System.Windows.Forms.MessageBox.Show("Conexão feita com sucesso!!");
+                System.Windows.Forms.MessageBox.Show("Connection made successfully!!");
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Conexão não foi estabelecida!!");
+                System.Windows.Forms.MessageBox.Show("Connection was not established!!");
             }
         }
 

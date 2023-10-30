@@ -111,10 +111,19 @@
     </Compile>
     <Compile Include="MiscClass\Common.cs" />
     <Compile Include="MSSQLCommands\Connect.cs" />
+    <Compile Include="PanelForm\PanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelForm\PanelForm.Designer.cs">
+      <DependentUpon>PanelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelForm\PanelForm.resx">
+      <DependentUpon>PanelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

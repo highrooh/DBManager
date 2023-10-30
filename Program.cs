@@ -66,13 +66,13 @@ namespace DBManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoadConfigs();
-            if(ClassConfig.ConfigForm.Install == "false")
+            if(ClassConfig.ConfigForm.Install != "true")
             {
              Application.Run(new Config());
             }
             else
             {
-                Application.Run(new Config());
+                Application.Run(new PanelForm.PanelForm());
             }
         }
     }

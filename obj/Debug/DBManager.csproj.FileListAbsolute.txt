@@ -42,3 +42,4 @@ C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.csproj.CoreCompileInpu
 C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.csproj.CopyComplete
 C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.exe
 C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.pdb
+C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.PanelForm.PanelForm.resources
