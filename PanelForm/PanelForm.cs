@@ -17,11 +17,20 @@ namespace DBManager.PanelForm
         public PanelForm()
         {
             InitializeComponent();
+            if(ClassConfig.ConfigForm.DbType == "0")
+            {
+                mYSQLToolStripMenuItem.Visible = false;
+            }
+            else if(ClassConfig.ConfigForm.DbType== "1")
+            {
+                lMenuMSSQL.Visible = false;
+            }
         }
 
         private void lClose_Click(object sender, EventArgs e)
         {
             this.Close();
+           
         }
 
         private void lMinimize_Click(object sender, EventArgs e)

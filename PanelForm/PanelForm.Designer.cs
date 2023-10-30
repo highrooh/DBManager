@@ -38,6 +38,8 @@
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateXLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mYSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -99,11 +101,12 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Font = new System.Drawing.Font("Caviar Dreams", 11.25F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lMenuMSSQL});
+            this.lMenuMSSQL,
+            this.mYSQLToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(1, 4);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(78, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(149, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,7 +115,8 @@
             this.lMenuMSSQL.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backupDatabaseToolStripMenuItem,
             this.getToolStripMenuItem,
-            this.generateXLSToolStripMenuItem});
+            this.generateXLSToolStripMenuItem,
+            this.viewTablesToolStripMenuItem});
             this.lMenuMSSQL.Name = "lMenuMSSQL";
             this.lMenuMSSQL.Size = new System.Drawing.Size(70, 22);
             this.lMenuMSSQL.Text = "MSSQL";
@@ -134,6 +138,18 @@
             this.generateXLSToolStripMenuItem.Name = "generateXLSToolStripMenuItem";
             this.generateXLSToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.generateXLSToolStripMenuItem.Text = "Generate XLS";
+            // 
+            // mYSQLToolStripMenuItem
+            // 
+            this.mYSQLToolStripMenuItem.Name = "mYSQLToolStripMenuItem";
+            this.mYSQLToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
+            this.mYSQLToolStripMenuItem.Text = "MYSQL";
+            // 
+            // viewTablesToolStripMenuItem
+            // 
+            this.viewTablesToolStripMenuItem.Name = "viewTablesToolStripMenuItem";
+            this.viewTablesToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.viewTablesToolStripMenuItem.Text = "View Tables";
             // 
             // PanelForm
             // 
@@ -173,5 +189,7 @@
         private System.Windows.Forms.ToolStripMenuItem backupDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generateXLSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mYSQLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewTablesToolStripMenuItem;
     }
 }
