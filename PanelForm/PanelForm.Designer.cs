@@ -38,8 +38,8 @@
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateXLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mYSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mYSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.lClose);
             this.panel1.Controls.Add(this.lMinimize);
             this.panel1.Location = new System.Drawing.Point(5, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1219, 662);
             this.panel1.TabIndex = 6;
@@ -139,17 +139,17 @@
             this.generateXLSToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.generateXLSToolStripMenuItem.Text = "Generate XLS";
             // 
-            // mYSQLToolStripMenuItem
-            // 
-            this.mYSQLToolStripMenuItem.Name = "mYSQLToolStripMenuItem";
-            this.mYSQLToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
-            this.mYSQLToolStripMenuItem.Text = "MYSQL";
-            // 
             // viewTablesToolStripMenuItem
             // 
             this.viewTablesToolStripMenuItem.Name = "viewTablesToolStripMenuItem";
             this.viewTablesToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.viewTablesToolStripMenuItem.Text = "View Tables";
+            // 
+            // mYSQLToolStripMenuItem
+            // 
+            this.mYSQLToolStripMenuItem.Name = "mYSQLToolStripMenuItem";
+            this.mYSQLToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
+            this.mYSQLToolStripMenuItem.Text = "MYSQL";
             // 
             // PanelForm
             // 
@@ -161,7 +161,7 @@
             this.Font = new System.Drawing.Font("Caviar Dreams", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PanelForm";

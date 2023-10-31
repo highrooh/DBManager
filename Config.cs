@@ -158,11 +158,12 @@ namespace DBManager
 
             Program.LoadConfigs();
         }
-        private void bNext_Click(object sender, EventArgs e)
+       
+        private void bNext_Click_1(object sender, EventArgs e)
         {
             SaveConfig();
 
-            if(ConfigForm.DbType == "0")
+            if (ConfigForm.DbType == "0")
             {
                 MSSQLCommands.Connect connect = new MSSQLCommands.Connect();
 
@@ -176,7 +177,6 @@ namespace DBManager
                     MessageBox.Show("Connection not established!");
                 }
             }
-
         }
     }
 }

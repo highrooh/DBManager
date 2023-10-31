@@ -25,6 +25,7 @@ namespace DBManager.PanelForm
             {
                 lMenuMSSQL.Visible = false;
             }
+
         }
 
         private void lClose_Click(object sender, EventArgs e)
