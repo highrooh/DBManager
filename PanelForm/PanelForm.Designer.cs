@@ -208,7 +208,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(1, 4);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(149, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(269, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -241,6 +241,7 @@
             this.generateXLSToolStripMenuItem.Name = "generateXLSToolStripMenuItem";
             this.generateXLSToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.generateXLSToolStripMenuItem.Text = "Generate XLS";
+            this.generateXLSToolStripMenuItem.Click += new System.EventHandler(this.generateXLSToolStripMenuItem_Click);
             // 
             // viewTablesToolStripMenuItem
             // 

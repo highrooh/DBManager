@@ -103,5 +103,17 @@ namespace DBManager.PanelForm
             bkp.BringToFront();
             bkp.Show();
         }
+
+        private void generateXLSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.materialCard3.Controls.RemoveAt(0);
+            MSSQLForm.GenXLS.GenXLS gls = new MSSQLForm.GenXLS.GenXLS();
+            gls.TopLevel = false;
+            gls.Dock = DockStyle.Fill;
+            this.materialCard3.Controls.Add(gls);
+            this.materialCard3.Tag = gls;
+            gls.BringToFront();
+            gls.Show();
+        }
     }
 }
