@@ -12,10 +12,9 @@ namespace DBManager.MSSQLCommands
     public class Connect
     {
 
-        public SqlConnection connection = new SqlConnection("Database=" + SQLConfig.DatabaseSQL + ";Server=" + SQLConfig.ServerSQL + ";user=" + SQLConfig.LoginSQL + ";password=" + SQLConfig.PassSQL + "");
+        public static SqlConnection connection = new SqlConnection("Database=" + SQLConfig.DatabaseSQL + ";Server=" + SQLConfig.ServerSQL + ";user=" + SQLConfig.LoginSQL + ";password=" + SQLConfig.PassSQL + "");
 
-
-
+        public string conexaosql = ($"Database=" + SQLConfig.DatabaseSQL + ";Server=" + SQLConfig.ServerSQL + ";user=" + SQLConfig.LoginSQL + ";password=" + SQLConfig.PassSQL + "");
 
         public bool TestConnection()
         {

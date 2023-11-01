@@ -30,6 +30,10 @@ namespace DBManager.PanelForm
 
             Design();
 
+          
+
+
+
         }
 
         private void lClose_Click(object sender, EventArgs e)
@@ -74,6 +78,7 @@ namespace DBManager.PanelForm
             CountTables.Base.Foreground = System.Windows.Media.Brushes.White;
             CountTables.InnerRadius = 0;
             CountTables.HighFontSize = 30;
+            CountTables.Value = MSSQLCommands.PanelFormView.CountTables();
             CountTables.GaugeBackground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(71, 128, 181));
 
 
@@ -83,7 +88,20 @@ namespace DBManager.PanelForm
             dbUseDisk.Base.Foreground = System.Windows.Media.Brushes.White;
             dbUseDisk.InnerRadius = 0;
             dbUseDisk.HighFontSize = 30;
+            dbUseDisk.Value = MSSQLCommands.PanelFormView.DiskUsage();
             dbUseDisk.GaugeBackground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(71, 128, 181));
+        }
+
+        private void backupDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.materialCard3.Controls.RemoveAt(0);
+            MSSQLForm.BackupDatabase.BackupDatabase bkp = new MSSQLForm.BackupDatabase.BackupDatabase();
+            bkp.TopLevel = false;
+            bkp.Dock = DockStyle.Fill;
+            this.materialCard3.Controls.Add(bkp);
+            this.materialCard3.Tag = bkp;
+            bkp.BringToFront();
+            bkp.Show();
         }
     }
 }

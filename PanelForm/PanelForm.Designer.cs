@@ -32,6 +32,13 @@
             this.lMinimize = new System.Windows.Forms.Label();
             this.lClose = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.CountTables = new LiveCharts.WinForms.SolidGauge();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dbUseDisk = new LiveCharts.WinForms.SolidGauge();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lMenuMSSQL = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,19 +47,12 @@
             this.generateXLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mYSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dbUseDisk = new LiveCharts.WinForms.SolidGauge();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.CountTables = new LiveCharts.WinForms.SolidGauge();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.panel1.SuspendLayout();
+            this.materialCard3.SuspendLayout();
+            this.materialCard2.SuspendLayout();
+            this.materialCard1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.materialCard1.SuspendLayout();
-            this.materialCard2.SuspendLayout();
-            this.materialCard3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lMinimize
@@ -99,6 +99,94 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseUp);
             // 
+            // materialCard3
+            // 
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.materialCard2);
+            this.materialCard3.Controls.Add(this.materialCard1);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(7, 40);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(1205, 618);
+            this.materialCard3.TabIndex = 9;
+            this.materialCard3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseDown);
+            this.materialCard3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseMove);
+            this.materialCard3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseUp);
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.materialLabel2);
+            this.materialCard2.Controls.Add(this.CountTables);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(28, 18);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(269, 181);
+            this.materialCard2.TabIndex = 9;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(84, 31);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(99, 19);
+            this.materialLabel2.TabIndex = 8;
+            this.materialLabel2.Text = "Count Tables:";
+            // 
+            // CountTables
+            // 
+            this.CountTables.Location = new System.Drawing.Point(36, 79);
+            this.CountTables.Name = "CountTables";
+            this.CountTables.Size = new System.Drawing.Size(200, 100);
+            this.CountTables.TabIndex = 7;
+            this.CountTables.Text = "CountTables";
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.materialLabel1);
+            this.materialCard1.Controls.Add(this.dbUseDisk);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(914, 18);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(269, 181);
+            this.materialCard1.TabIndex = 8;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(96, 31);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(91, 19);
+            this.materialLabel1.TabIndex = 8;
+            this.materialLabel1.Text = "DB Use Disk:";
+            // 
+            // dbUseDisk
+            // 
+            this.dbUseDisk.Location = new System.Drawing.Point(36, 79);
+            this.dbUseDisk.Name = "dbUseDisk";
+            this.dbUseDisk.Size = new System.Drawing.Size(200, 100);
+            this.dbUseDisk.TabIndex = 7;
+            this.dbUseDisk.Text = "MemoryUse";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.menuStrip1);
@@ -106,6 +194,9 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1150, 35);
             this.panel2.TabIndex = 6;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseUp);
             // 
             // menuStrip1
             // 
@@ -137,6 +228,7 @@
             this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
             this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
+            this.backupDatabaseToolStripMenuItem.Click += new System.EventHandler(this.backupDatabaseToolStripMenuItem_Click);
             // 
             // getToolStripMenuItem
             // 
@@ -162,91 +254,6 @@
             this.mYSQLToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
             this.mYSQLToolStripMenuItem.Text = "MYSQL";
             // 
-            // dbUseDisk
-            // 
-            this.dbUseDisk.Location = new System.Drawing.Point(36, 79);
-            this.dbUseDisk.Name = "dbUseDisk";
-            this.dbUseDisk.Size = new System.Drawing.Size(200, 100);
-            this.dbUseDisk.TabIndex = 7;
-            this.dbUseDisk.Text = "MemoryUse";
-            // 
-            // materialCard1
-            // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialLabel1);
-            this.materialCard1.Controls.Add(this.dbUseDisk);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(927, 8);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(269, 181);
-            this.materialCard1.TabIndex = 8;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(96, 31);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(91, 19);
-            this.materialLabel1.TabIndex = 8;
-            this.materialLabel1.Text = "DB Use Disk:";
-            // 
-            // materialCard2
-            // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.materialLabel2);
-            this.materialCard2.Controls.Add(this.CountTables);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(7, 8);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(269, 181);
-            this.materialCard2.TabIndex = 9;
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(84, 31);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(99, 19);
-            this.materialLabel2.TabIndex = 8;
-            this.materialLabel2.Text = "Count Tables:";
-            // 
-            // CountTables
-            // 
-            this.CountTables.Location = new System.Drawing.Point(36, 79);
-            this.CountTables.Name = "CountTables";
-            this.CountTables.Size = new System.Drawing.Size(200, 100);
-            this.CountTables.TabIndex = 7;
-            this.CountTables.Text = "CountTables";
-            // 
-            // materialCard3
-            // 
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.materialCard2);
-            this.materialCard3.Controls.Add(this.materialCard1);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(7, 40);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(1205, 618);
-            this.materialCard3.TabIndex = 9;
-            // 
             // PanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -266,15 +273,15 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelForm_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.materialCard3.ResumeLayout(false);
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
-            this.materialCard3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
