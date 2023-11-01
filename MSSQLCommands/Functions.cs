@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 using DBManager.ClassConfig;
 using System.Windows;
 using System.Reflection;
+using System.Windows.Shapes;
 
 namespace DBManager.MSSQLCommands
 {
@@ -24,7 +25,7 @@ namespace DBManager.MSSQLCommands
             var server = new Server(new ServerConnection { ConnectionString = new SqlConnectionStringBuilder { DataSource = @"" + SQLConfig.ServerSQL + "", UserID = "" + SQLConfig.LoginSQL + "", Password = "" + SQLConfig.PassSQL + "", TrustServerCertificate = true }.ToString() });
             server.ConnectionContext.Connect();
             var database = server.Databases["" + SQLConfig.DatabaseSQL + ""];
-            var file = new FileInfo(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)));
+            var file = new FileInfo(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)));
             using (FileStream fs = new FileStream(@""+ file +"\\Backups\\"+ TableName +".sql", FileMode.Append, FileAccess.Write))
             using (StreamWriter sw = new StreamWriter(fs))
             {
@@ -34,6 +35,11 @@ namespace DBManager.MSSQLCommands
                     {
                         var scripter = new Scripter(server) { Options = { ScriptData = true } };
                         var script = scripter.EnumScript(new SqlSmoObject[] { table });
+                        foreach(string line in script)
+                        {
+
+                            sw.WriteLine(line);                        
+                        }
                     }
                 }
             }
@@ -47,7 +53,7 @@ namespace DBManager.MSSQLCommands
             string query = "";
 
 
-            var file = new FileInfo(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)));
+            var file = new FileInfo(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)));
 
             query = @" BACKUP DATABASE " + SQLConfig.DatabaseSQL + "" +
               " TO DISK = '"+ file + "\\Backups\\" + SQLConfig.DatabaseSQL + ".bak'" +
