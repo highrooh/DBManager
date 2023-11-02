@@ -426,6 +426,12 @@
     <Compile Include="PanelForm\MSSQLForm\GenXLS\GenXLS.Designer.cs">
       <DependentUpon>GenXLS.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelForm\MSSQLForm\TruncateTable\TruncateTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelForm\MSSQLForm\TruncateTable\TruncateTable.Designer.cs">
+      <DependentUpon>TruncateTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelForm\PanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelForm\MSSQLForm\GenXLS\GenXLS.resx">
       <DependentUpon>GenXLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelForm\MSSQLForm\TruncateTable\TruncateTable.resx">
+      <DependentUpon>TruncateTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelForm\PanelForm.resx">
       <DependentUpon>PanelForm.cs</DependentUpon>
@@ -473,7 +482,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MYSQLCommands\" />
-    <Folder Include="PanelForm\MSSQLForm\TruncateTable\" />
     <Folder Include="PanelForm\MSSQLForm\ViewTables\" />
   </ItemGroup>
   <ItemGroup>

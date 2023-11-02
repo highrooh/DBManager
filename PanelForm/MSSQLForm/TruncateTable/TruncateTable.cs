@@ -1,5 +1,4 @@
-﻿using DBManager.MSSQLCommands;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
-namespace DBManager.PanelForm.MSSQLForm.GenXLS
+namespace DBManager.PanelForm.MSSQLForm.TruncateTable
 {
-    public partial class GenXLS : Form
+    public partial class TruncateTable : Form
     {
-        public GenXLS()
+        string query = "";
+        public TruncateTable()
         {
             InitializeComponent();
         }
-
 
         public void CompleteTable()
         {
@@ -42,7 +42,7 @@ namespace DBManager.PanelForm.MSSQLForm.GenXLS
                         }
                     }
                 }
-
+               
             }
 
             catch (Exception ex)
@@ -51,8 +51,15 @@ namespace DBManager.PanelForm.MSSQLForm.GenXLS
             }
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
+
+        private void TruncateTable_Load(object sender, EventArgs e)
         {
+            CompleteTable();
+        }
+
+        private void bTruncateOneTable_Click(object sender, EventArgs e)
+        {
+
             for (int i = 0; i <= cbTables.Items.Count; i++)
 
             {
@@ -61,17 +68,25 @@ namespace DBManager.PanelForm.MSSQLForm.GenXLS
                     if (cbTables.Items[i].Checked)
                     {
                         string nametable = cbTables.Items[i].Text;
+                        query = @" USE "+ ClassConfig.SQLConfig.DatabaseSQL +""+
+                            "\n\r"+
+                            " EXEC sp_MSforeachtable 'TRUNCATE TABLE "+ nametable +"'";
 
-                        MSSQLCommands.GenXLS.GetXLS(nametable);
+                        MSSQLCommands.Functions.QueryExec(query);
                     }
                 }
             }
-            MessageBox.Show("XLSX Generated successfully!");
+            
         }
 
-        private void GenXLS_Load(object sender, EventArgs e)
+        private void bTruncateAll_Click(object sender, EventArgs e)
         {
-            CompleteTable();
+            query = @" USE " + ClassConfig.SQLConfig.DatabaseSQL + "" +
+                     "\n\r" +
+                   " EXEC sp_MSforeachtable 'TRUNCATE TABLE ?'";
+
+            MSSQLCommands.Functions.QueryExec(query);
+
         }
     }
 }

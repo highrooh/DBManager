@@ -47,6 +47,28 @@ namespace DBManager.MSSQLCommands
         }
 
 
+        public static void QueryExec(string Query)
+        {
+            var db = new MSSQLCommands.Connect();
+            var connection = new SqlConnection(db.conexaosql);
+            try
+            {
+                SqlCommand query = new SqlCommand(Query, connection);
+                connection.Open();
+                query.ExecuteNonQuery();
+
+
+
+
+                MessageBox.Show("Query Exec");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         public static void BackupAllDatabase()
         {
@@ -71,6 +93,8 @@ namespace DBManager.MSSQLCommands
                 connection.Open();
                 SqlDataAdapter da = new SqlDataAdapter(go);
                 go.ExecuteNonQuery();
+
+                MessageBox.Show("Backup Database Generated successfully!");
 
             }
 

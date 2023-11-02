@@ -71,6 +71,7 @@ namespace DBManager.PanelForm.MSSQLForm.BackupDatabase
                 }
                 }
             }
+            MessageBox.Show("Backup Tables Generated successfully!");
         }
 
         private void getDatabase_Click(object sender, EventArgs e)

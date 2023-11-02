@@ -115,5 +115,17 @@ namespace DBManager.PanelForm
             gls.BringToFront();
             gls.Show();
         }
+
+        private void getToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.materialCard3.Controls.RemoveAt(0);
+            MSSQLForm.TruncateTable.TruncateTable tbt = new MSSQLForm.TruncateTable.TruncateTable();
+            tbt.TopLevel = false;
+            tbt.Dock = DockStyle.Fill;
+            this.materialCard3.Controls.Add(tbt);
+            this.materialCard3.Tag = tbt;
+            tbt.BringToFront();
+            tbt.Show();
+        }
     }
 }

@@ -235,6 +235,7 @@
             this.getToolStripMenuItem.Name = "getToolStripMenuItem";
             this.getToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.getToolStripMenuItem.Text = "Truncate Database";
+            this.getToolStripMenuItem.Click += new System.EventHandler(this.getToolStripMenuItem_Click);
             // 
             // generateXLSToolStripMenuItem
             // 
