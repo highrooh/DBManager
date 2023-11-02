@@ -20,6 +20,8 @@ namespace DBManager.MSSQLCommands
 {
     public class Functions
     {
+        const int maxBinaryDisplayString = 8000;
+
         public static void BackupTables(string TableName)
         {
             var server = new Server(new ServerConnection { ConnectionString = new SqlConnectionStringBuilder { DataSource = @"" + SQLConfig.ServerSQL + "", UserID = "" + SQLConfig.LoginSQL + "", Password = "" + SQLConfig.PassSQL + "", TrustServerCertificate = true }.ToString() });
@@ -61,6 +63,7 @@ namespace DBManager.MSSQLCommands
 
 
                 MessageBox.Show("Query Exec");
+                connection.Close();
             }
 
             catch (Exception ex)
@@ -68,6 +71,52 @@ namespace DBManager.MSSQLCommands
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+        public static DataTable FixBinaryColumnsForDisplay(DataTable t)
+        {
+            List<string> binaryColumnNames = t.Columns.Cast<DataColumn>().Where(col => col.DataType.Equals(typeof(byte[]))).Select(col => col.ColumnName).ToList();
+            foreach (string binaryColumnName in binaryColumnNames)
+            {
+                string tempColumnName = "C" + Guid.NewGuid().ToString();
+                t.Columns.Add(new DataColumn(tempColumnName, typeof(string)));
+                t.Columns[tempColumnName].SetOrdinal(t.Columns[binaryColumnName].Ordinal);
+
+                StringBuilder hexBuilder = new StringBuilder(maxBinaryDisplayString * 2 + 2);
+                foreach (DataRow r in t.Rows)
+                {
+                    r[tempColumnName] = BinaryDataColumnToString(hexBuilder, r[binaryColumnName]);
+                }
+
+                t.Columns.Remove(binaryColumnName);
+                t.Columns[tempColumnName].ColumnName = binaryColumnName;
+            }
+            return t;
+        }
+
+
+        private static string BinaryDataColumnToString(StringBuilder hexBuilder, object columnValue)
+        {
+            const string hexChars = "0123456789ABCDEF";
+            if (columnValue == DBNull.Value)
+            {
+                return "(null)";
+            }
+            else
+            {
+                byte[] byteArray = (byte[])columnValue;
+                int displayLength = (byteArray.Length > maxBinaryDisplayString) ? maxBinaryDisplayString : byteArray.Length;
+                hexBuilder.Length = 0;
+                hexBuilder.Append("0x");
+                for (int i = 0; i < displayLength; i++)
+                {
+                    hexBuilder.Append(hexChars[(int)byteArray[i] >> 4]);
+                    hexBuilder.Append(hexChars[(int)byteArray[i] % 0x10]);
+                }
+                return hexBuilder.ToString();
+            }
+        }
+
 
 
         public static void BackupAllDatabase()
@@ -95,7 +144,7 @@ namespace DBManager.MSSQLCommands
                 go.ExecuteNonQuery();
 
                 MessageBox.Show("Backup Database Generated successfully!");
-
+                connection.Close();
             }
 
             catch (Exception ex)

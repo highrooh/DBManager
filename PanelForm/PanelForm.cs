@@ -127,5 +127,17 @@ namespace DBManager.PanelForm
             tbt.BringToFront();
             tbt.Show();
         }
+
+        private void viewTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.materialCard3.Controls.RemoveAt(0);
+            MSSQLForm.ViewTables.ViewTables viewtb = new MSSQLForm.ViewTables.ViewTables();
+            viewtb.TopLevel = false;
+            viewtb.Dock = DockStyle.Fill;
+            this.materialCard3.Controls.Add(viewtb);
+            this.materialCard3.Tag = viewtb;
+            viewtb.BringToFront();
+            viewtb.Show();
+        }
     }
 }

@@ -249,6 +249,7 @@
             this.viewTablesToolStripMenuItem.Name = "viewTablesToolStripMenuItem";
             this.viewTablesToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.viewTablesToolStripMenuItem.Text = "View Tables";
+            this.viewTablesToolStripMenuItem.Click += new System.EventHandler(this.viewTablesToolStripMenuItem_Click);
             // 
             // mYSQLToolStripMenuItem
             // 

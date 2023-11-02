@@ -30,7 +30,9 @@ namespace DBManager.MSSQLCommands
 
 				dataAdapter.Fill(dataTable);
 
-				var excelApplication = new Excel.Application();
+                MSSQLCommands.Functions.FixBinaryColumnsForDisplay(dataTable);
+
+                var excelApplication = new Excel.Application();
 
 				var excelWorkBook = excelApplication.Application.Workbooks.Add(Type.Missing);
 

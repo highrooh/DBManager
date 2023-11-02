@@ -256,3 +256,4 @@ C:\Users\rodri\source\repos\DBManager\bin\Debug\VBIDEApi.xml
 C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.PanelForm.MSSQLForm.GenXLS.GenXLS.resources
 C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.csproj.ResolveComReference.cache
 C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.PanelForm.MSSQLForm.TruncateTable.TruncateTable.resources
+C:\Users\rodri\source\repos\DBManager\obj\Debug\DBManager.PanelForm.MSSQLForm.ViewTables.ViewTables.resources

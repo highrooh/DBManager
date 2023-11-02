@@ -47,7 +47,7 @@ namespace DBManager.PanelForm.MSSQLForm.BackupDatabase
                         }
                     }
                 }
-
+                connection.Close();
             }
 
             catch (Exception ex)

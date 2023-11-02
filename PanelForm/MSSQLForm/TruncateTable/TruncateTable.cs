@@ -42,7 +42,7 @@ namespace DBManager.PanelForm.MSSQLForm.TruncateTable
                         }
                     }
                 }
-               
+                connection.Close();
             }
 
             catch (Exception ex)

@@ -40,7 +40,7 @@ namespace DBManager.MSSQLCommands
                         }
                     }
                 }
-
+                connection.Close();
             }
 
             catch (Exception ex)
@@ -77,7 +77,7 @@ namespace DBManager.MSSQLCommands
                         value = double.Parse(valuex, System.Globalization.CultureInfo.InvariantCulture);
                     }
                 }
-
+                connection.Close();
             }
 
             catch (Exception ex)
