@@ -171,6 +171,9 @@ namespace DBManager
                 if (result)
                 {
                     MessageBox.Show("Connection established!");
+                    this.Hide();
+                    PanelForm.PanelForm panelForm = new PanelForm.PanelForm();
+                    panelForm.Show();
                 }
                 else
                 {

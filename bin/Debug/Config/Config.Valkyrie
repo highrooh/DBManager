@@ -3,7 +3,7 @@ Install = true
 DbType = 0
 
 [Config SQL Server]
-ServerSQL = Rodrigo
+ServerSQL = (local)
 DatabaseSQL = MuOnline
 LoginSQL = sa
 PassSQL = 12345

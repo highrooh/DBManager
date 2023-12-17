@@ -89,7 +89,7 @@
             this.bGet.NoAccentTextColor = System.Drawing.Color.Empty;
             this.bGet.Size = new System.Drawing.Size(105, 36);
             this.bGet.TabIndex = 2;
-            this.bGet.Text = "GET TABLES";
+            this.bGet.Text = "LER TABELA";
             this.bGet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.bGet.UseAccentColor = false;
             this.bGet.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             this.getDatabase.MouseState = MaterialSkin.MouseState.HOVER;
             this.getDatabase.Name = "getDatabase";
             this.getDatabase.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.getDatabase.Size = new System.Drawing.Size(105, 36);
+            this.getDatabase.Size = new System.Drawing.Size(156, 36);
             this.getDatabase.TabIndex = 3;
-            this.getDatabase.Text = "GET ALL DATABASE";
+            this.getDatabase.Text = "LER TODAS AS TABELAS";
             this.getDatabase.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.getDatabase.UseAccentColor = false;
             this.getDatabase.UseVisualStyleBackColor = true;

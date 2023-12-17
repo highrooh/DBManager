@@ -36,6 +36,9 @@
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.CountTables = new LiveCharts.WinForms.SolidGauge();
+            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.solidGauge2 = new LiveCharts.WinForms.SolidGauge();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.dbUseDisk = new LiveCharts.WinForms.SolidGauge();
@@ -50,6 +53,7 @@
             this.panel1.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
+            this.materialCard5.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -103,6 +107,7 @@
             // 
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard3.Controls.Add(this.materialCard2);
+            this.materialCard3.Controls.Add(this.materialCard5);
             this.materialCard3.Controls.Add(this.materialCard1);
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -124,12 +129,12 @@
             this.materialCard2.Controls.Add(this.CountTables);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(28, 18);
+            this.materialCard2.Location = new System.Drawing.Point(914, 116);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(269, 181);
+            this.materialCard2.Size = new System.Drawing.Size(269, 97);
             this.materialCard2.TabIndex = 9;
             // 
             // materialLabel2
@@ -137,7 +142,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(84, 31);
+            this.materialLabel2.Location = new System.Drawing.Point(91, 7);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(99, 19);
@@ -146,11 +151,46 @@
             // 
             // CountTables
             // 
-            this.CountTables.Location = new System.Drawing.Point(36, 79);
+            this.CountTables.Location = new System.Drawing.Point(43, 29);
             this.CountTables.Name = "CountTables";
-            this.CountTables.Size = new System.Drawing.Size(200, 100);
+            this.CountTables.Size = new System.Drawing.Size(200, 82);
             this.CountTables.TabIndex = 7;
             this.CountTables.Text = "CountTables";
+            // 
+            // materialCard5
+            // 
+            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard5.Controls.Add(this.materialLabel4);
+            this.materialCard5.Controls.Add(this.solidGauge2);
+            this.materialCard5.Depth = 0;
+            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard5.Location = new System.Drawing.Point(20, 18);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard5.Name = "materialCard5";
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard5.Size = new System.Drawing.Size(269, 92);
+            this.materialCard5.TabIndex = 10;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(59, 7);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(152, 19);
+            this.materialLabel4.TabIndex = 8;
+            this.materialLabel4.Text = "Total Server Memory:";
+            // 
+            // solidGauge2
+            // 
+            this.solidGauge2.Location = new System.Drawing.Point(43, 29);
+            this.solidGauge2.Name = "solidGauge2";
+            this.solidGauge2.Size = new System.Drawing.Size(200, 82);
+            this.solidGauge2.TabIndex = 7;
+            this.solidGauge2.Text = "MemoryUse";
             // 
             // materialCard1
             // 
@@ -164,7 +204,7 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(269, 181);
+            this.materialCard1.Size = new System.Drawing.Size(269, 92);
             this.materialCard1.TabIndex = 8;
             // 
             // materialLabel1
@@ -172,7 +212,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(96, 31);
+            this.materialLabel1.Location = new System.Drawing.Point(96, 7);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(91, 19);
@@ -181,9 +221,9 @@
             // 
             // dbUseDisk
             // 
-            this.dbUseDisk.Location = new System.Drawing.Point(36, 79);
+            this.dbUseDisk.Location = new System.Drawing.Point(43, 29);
             this.dbUseDisk.Name = "dbUseDisk";
-            this.dbUseDisk.Size = new System.Drawing.Size(200, 100);
+            this.dbUseDisk.Size = new System.Drawing.Size(200, 82);
             this.dbUseDisk.TabIndex = 7;
             this.dbUseDisk.Text = "MemoryUse";
             // 
@@ -208,7 +248,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(1, 4);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(269, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(149, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -279,6 +319,8 @@
             this.materialCard3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
+            this.materialCard5.ResumeLayout(false);
+            this.materialCard5.PerformLayout();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -309,5 +351,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private LiveCharts.WinForms.SolidGauge CountTables;
         private MaterialSkin.Controls.MaterialCard materialCard3;
+        private MaterialSkin.Controls.MaterialCard materialCard5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private LiveCharts.WinForms.SolidGauge solidGauge2;
     }
 }

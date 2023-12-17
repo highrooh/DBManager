@@ -50,7 +50,7 @@
             this.gXLSX.NoAccentTextColor = System.Drawing.Color.Empty;
             this.gXLSX.Size = new System.Drawing.Size(89, 36);
             this.gXLSX.TabIndex = 0;
-            this.gXLSX.Text = "GEN XLSX";
+            this.gXLSX.Text = "GERAR XLSX";
             this.gXLSX.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.gXLSX.UseAccentColor = false;
             this.gXLSX.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(36, 23);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(819, 280);
             this.materialCard1.TabIndex = 2;
             // 

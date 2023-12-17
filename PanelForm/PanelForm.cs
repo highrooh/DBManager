@@ -90,6 +90,15 @@ namespace DBManager.PanelForm
             dbUseDisk.HighFontSize = 30;
             dbUseDisk.Value = MSSQLCommands.PanelFormView.DiskUsage();
             dbUseDisk.GaugeBackground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(71, 128, 181));
+
+
+            solidGauge2.ToColor = System.Windows.Media.Color.FromRgb(142, 68, 173);
+            solidGauge2.FromColor = System.Windows.Media.Color.FromRgb(142, 68, 173);
+            solidGauge2.Base.Foreground = System.Windows.Media.Brushes.White;
+            solidGauge2.InnerRadius = 0;
+            solidGauge2.HighFontSize = 30;
+            solidGauge2.Value = MSSQLCommands.PanelFormView.MemorySqlServerUse();
+            solidGauge2.GaugeBackground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(71, 128, 181));
         }
 
         private void backupDatabaseToolStripMenuItem_Click(object sender, EventArgs e)

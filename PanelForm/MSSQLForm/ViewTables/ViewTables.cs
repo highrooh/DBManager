@@ -85,19 +85,34 @@ namespace DBManager.PanelForm.MSSQLForm.ViewTables
 
         private void vTables_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= cbTables.Items.Count; i++)
 
-            {
-                if (cbTables.Items.Count != i)
+            int z = 0;
+
+            
+                for (int i = 0; i <= cbTables.Items.Count; i++)
+              {
+                if (z <= 1)
+                {
+                    if (cbTables.Items.Count != i)
                 {
                     if (cbTables.Items[i].Checked)
                     {
                         string nametable = cbTables.Items[i].Text;
                         query = @"SELECT * FROM "+ nametable +"";
                         ViewItemTable(query);
+                        z++;
                     }
+                  }
                 }
+                else
+                {
+                    MessageBox.Show("Você tem mais de um valor selecionado!!");
+                    cbTables.Items[i].CheckState = CheckState.Unchecked;
+                    return;
+                }
+
             }
+            
         }
 
         private void ViewTables_Load(object sender, EventArgs e)

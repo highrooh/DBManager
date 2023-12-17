@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTables));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cbTables = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.vTables = new MaterialSkin.Controls.MaterialButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
@@ -67,6 +67,17 @@
             this.materialCard1.Size = new System.Drawing.Size(867, 280);
             this.materialCard1.TabIndex = 6;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(429, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(438, 280);
+            this.dataGridView1.TabIndex = 9;
+            // 
             // cbTables
             // 
             this.cbTables.AutoScroll = true;
@@ -92,24 +103,13 @@
             this.vTables.MouseState = MaterialSkin.MouseState.HOVER;
             this.vTables.Name = "vTables";
             this.vTables.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.vTables.Size = new System.Drawing.Size(104, 36);
+            this.vTables.Size = new System.Drawing.Size(106, 36);
             this.vTables.TabIndex = 8;
-            this.vTables.Text = "View Table";
+            this.vTables.Text = "VER TABELA";
             this.vTables.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.vTables.UseAccentColor = false;
             this.vTables.UseVisualStyleBackColor = true;
             this.vTables.Click += new System.EventHandler(this.vTables_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(429, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(438, 280);
-            this.dataGridView1.TabIndex = 9;
             // 
             // materialTextBox1
             // 
@@ -140,9 +140,9 @@
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(77, 36);
+            this.materialButton1.Size = new System.Drawing.Size(64, 36);
             this.materialButton1.TabIndex = 10;
-            this.materialButton1.Text = "GET";
+            this.materialButton1.Text = "LER";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
